@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WYA Soluciones Integrales - Validación Excel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>WYA SOLUCIONES INTEGRALES</h1>
+    </header>
+
+    <div class="container">
+      <div class="tabs">
+        <div class="tab active" data-tab="upload">Subir Archivo</div>
+        <div class="tab" data-tab="results">Ver Resultados</div>
+      </div>
+
+      <div class="tab-content active" id="upload-tab">
+        <h2>Validación de Archivo Excel</h2>
+        <p>Sube un archivo Excel (.xls) para validarlo.</p>
+
+        <div id="alert-container"></div>
+
+        <div class="upload-form">
+          <div class="file-input-container" id="file-drop-area">
+            <img
+              src="https://img.icons8.com/?size=100&id=11566&format=png&color=000000"
+              alt="Subir Excel"
+            />
+            <p>
+              Arrastra y suelta un archivo Excel aquí o haz clic para
+              seleccionarlo
+            </p>
+            <input type="file" id="excel-file" accept=".xls" />
+            <div class="file-name" id="file-name"></div>
+          </div>
+
+          <button id="submit-btn" class="submit-btn" disabled>
+            Validar Archivo
+          </button>
+        </div>
+
+        <div class="loading" id="loading">
+          <div class="loading-spinner"></div>
+          <p>Procesando archivo, por favor espere...</p>
+        </div>
+      </div>
+
+      <div class="tab-content" id="results-tab">
+        <h2>Resultados de Validación</h2>
+        <p>
+          Aquí podrás ver los resultados de la validación del archivo Excel.
+        </p>
+
+        <div id="results-container" class="results-container">
+          <div class="alert alert-info">
+            Aún no hay resultados disponibles. Por favor, sube un archivo
+            primero.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
